@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import { models, systemRoles, temperatures } from './lib/roles';
-import { Send }from 'lucide-react';
+import { Send } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 
 type Message = {
   role: 'user' | 'assistant' | 'system';
@@ -121,7 +122,7 @@ export default function Home() {
           {messages.map((msg, idx) => (
             <div key={idx} className={`p-3 rounded-lg max-w-xl ${msg.role === 'user' ? 'bg-blue-100 self-end ml-auto' : 'bg-white'}`}>
               <span className="block text-sm font-semibold mb-1 capitalize">{msg.role}</span>
-              <p className="text-gray-700 whitespace-pre-wrap">{msg.content}</p>
+              <p className="text-gray-700 prose prose-sm whitespace-pre-wrap break-words"><ReactMarkdown>{msg.content}</ReactMarkdown></p>
             </div>
           ))}
           {loading && <div className="text-gray-500">Thinking...</div>}
