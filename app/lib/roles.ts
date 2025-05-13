@@ -7,6 +7,16 @@ export const systemRoles = [
       prompt: 'You are a helpful, friendly AI assistant.',
     },
     {
+      id: 'image_generator',
+      title: 'Image Generator',
+      prompt: 'You are a creative visual artist. Generate vivid and imaginative images based on descriptive prompts.',
+    },
+    {
+      id: 'video_generator',
+      title: 'Video Generator',
+      prompt: 'You are a cinematic video creator. Create engaging short videos based on user prompts using visual storytelling.',
+    },
+    {
       id: 'coder',
       title: 'Code Generator',
       prompt: 'You are an expert software engineer all programming languages. Write clean, working code.',
@@ -51,7 +61,10 @@ export const systemRoles = [
 export const models = [
     { value: 'openrouter/auto', label: '🔍 Auto' },
     { value: 'mistralai/mistral-medium-3', label: '🦙 LLaMA 4 Maverick' },
-    { value: 'mistralai/mistral-small-3.1-24b-instruct:free', label: '🌪 Mistral Small 3.1' }
+    { value: 'mistralai/mistral-small-3.1-24b-instruct:free', label: '🌪 Mistral Small 3.1' },
+    { value: 'google/gemini-2.0-flash-001', label: '🌪 Gemini 2.0 Flash' },
+    { value: 'black-forest-labs/flux-1-schnell:free', label: '🌪 Black forest labs' },
+    { value: 'playground-ai/playground-v2:free', label: '🌪 Playground' }
   ];
 
 export const temperatures = [
